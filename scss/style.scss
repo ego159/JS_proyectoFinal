@@ -1,0 +1,463 @@
+@import './variables';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --tipografia: 'Constance', sans-serif;
+}
+/*HEADER*/
+.logo{
+    height: 100px;
+}
+
+li{
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    a{ 
+        text-decoration: none;
+        color: black;
+    }
+    
+    &:hover{
+        font-weight: 600;
+    }
+    
+}
+
+
+#li-tienda{
+    animation-duration: 1s;
+    animation-name: loopTienda;
+    animation-iteration-count: infinite ;
+    color:  red;
+}
+
+@keyframes loopTienda{
+    0%{
+        
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+nav{
+    background-color: $natuColor;
+}
+
+
+
+header{
+    position: sticky;
+    top: 0px;
+}
+
+
+/*BODY*/
+body{
+    background-color: $natuColorClaro;
+}
+
+
+.aboutUs-section{
+    display: flex ;
+    flex-direction: column;
+    margin-top: 4rem;
+    text-align: center;
+
+}
+
+h1{
+    text-align: center;
+    font-family: var(--tipografia);
+    font-weight:bold;
+    text-decoration: underline;
+    padding-bottom: 20px;
+    
+    
+}
+
+main {
+    
+    h2{
+        padding: 2rem;
+    }
+}
+
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 15px;
+
+}
+
+.novedades{
+
+    h2{
+        font-family: var(--tipografia);
+        font-size: 20px;
+    }
+}
+
+h3{
+    font-family: var(--tipografia);
+    font-style: italic;
+    font-size: 20px;
+
+}
+
+.mapaForm{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-template-rows: 500px;
+    grid-template-areas: "map1 map2";
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+
+#mi-text-area{         /*PARA SOLUCIONAR PROBLEMA DE BOOSTRAP*/
+    height: 321px;
+}
+
+.input-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 95%;
+
+}
+
+.boton{
+    background-color: bisque;
+    border-radius: 5px;
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    grid-area: bot;
+    height: 25px;
+
+    &:hover{
+        background-color: rgb(255, 206, 147);
+    }
+}
+
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $natuColor ;
+}
+
+/*IMAGEN PRINCIAPL INDEX*/
+#imgPrincipal{
+    width: 100%;
+}
+
+/*MAPA INDEX*/
+.mapa{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
+    align-items: center;
+
+    h3{
+        font-weight: bold;
+    }
+}
+
+
+#tamano-mapa{
+    width: 90%;
+}
+/*FOOTER*/
+.footer-redes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 15%;
+    height: 5rem;
+
+}
+
+.logoRedes{
+    font-size: 40px;
+}
+
+#derechosMarca{
+    font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer{
+
+    h3{
+        font-weight: 200;
+        padding-right: 10px;
+    }   
+}  
+
+
+
+/*SECCION NOVEDADES DE NOVEDADES.HTML*/
+
+.img-novedades{
+    height: 370px;
+    width: 370px;
+}
+
+/*AGREGO ESTA CLASE PARA QUE LA INDICACION DE POSICION DEL CARRUSEL NO PISE EL TEXTO DE LAS CARD*/
+.card-margin-bottom{
+    margin-bottom: 2rem;
+}
+
+
+/*GALERIA EN PRODUCTOS.HTML*/
+
+.section-productos{
+    margin-top: 3rem;
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 400px 400px;
+    grid-template-areas: "img1 img2 img0"
+                         "img3 img4 img0";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.galeria-img{
+    height: 90% ;
+    width: 90%;
+    border-radius: 10px;
+    transition: all 1.5s;
+
+    &:hover{
+        transform: scale(1.5,1.5);
+    }
+}
+
+
+.galeria-img0{
+    grid-area: img0;
+    height: 95%;
+    width: 90%;
+    border-radius: 10px;
+    transition: all 1.5s;
+
+    &:hover{
+        transform: scale(1.5,1.5);
+    }
+}
+
+
+/*SECCION TIENDA*/
+
+.login-form{
+    width: 50%;
+}
+.grilla-tienda{
+    display: grid;
+    grid-template-columns: 90%;
+    grid-template-rows: 150px 150px 150px 150px;
+    grid-template-areas: "prod1"
+                         "prod2"
+                         "prod3"
+                         "prod4";
+    justify-content: center;
+    align-items: center;
+}
+
+.grilla-item{
+    display: grid;
+    grid-template-columns: 20% 45% 5% 20%;
+    grid-template-rows: 95%;
+    grid-template-areas: "img desc cant bot";
+    justify-content: space-between;
+    align-items: center;
+
+    h3{
+        font-size: 13px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        grid-area: desc;
+    }
+}
+
+
+.tamanoImg{
+    height: 90px;
+    grid-area: img;
+    border-radius: 5px;
+}
+
+.cantidad{
+    grid-area: cant;
+}
+
+#boton-tienda{
+    background-color: bisque;
+    color:black;
+    border-color: rgb(255, 206, 147);
+
+    &:hover{
+        background-color: rgb(255, 206, 147);
+        border-color: bisque;
+        color: black;
+    }
+}
+
+
+/*MEDIOS PAGOS*/
+.section-medios-pago{
+    height: 700px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.section-medios-pago img{
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    width: 70%;
+}
+
+/********************************************/
+/********************  MD  ******************/
+/********************************************/
+@media screen and (max-width: 600px){
+
+/*HOME*/
+
+    
+header img{
+        height: 50px;
+}
+
+#mi-text-area{
+    height: 300px;
+}
+
+
+h1{
+    text-align: center;
+    font-family: var(--tipografia);
+    font-style: italic;
+    text-decoration: underline;
+    font-size: 20px;
+}
+    
+    
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 10px;
+}
+
+/*NOVEDADES*/
+
+.novedades{
+    display: grid;
+    grid-template-columns: 80%;
+    grid-template-rows: 50px 100px 400px 20px;
+    grid-template-areas: "tituloNovedad"
+                          "descripcion"
+                          "imagen"
+                          "espacio";
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+
+    img{
+        width: 300px;
+        height: 300px;
+        grid-area: imagen;
+    }
+
+    h2{
+        font-size: 15px;
+    }
+
+    h3{
+        grid-area: descripcion;
+        text-align: center;
+        font-size: 10px;
+        
+    }
+}
+
+.section-novedades{
+    margin-top: 3rem;
+    grid-area: tituloNovedad;
+}
+
+/*PRODUCTOS*/
+
+.galeria{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-template-rows:200px 200px 200px;
+    grid-template-areas: "img1 img2"
+                         "img3 img4"
+                         "img5 img5";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.galeria-img{
+    height: 90% ;
+    width: 90%;
+}
+    
+.galeria-img0{
+    grid-area: img5;
+    height: 90%;
+    width: 95%;
+}
+
+    /*TIENDA*/
+.login{
+    width: 250px;
+    height: 100px;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-login{
+    display: flex;
+    justify-content: center;
+}
+    
+.grilla-item{
+    display: grid;
+    grid-template-columns: 25% 15% 50%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "img desc desc"
+                          "img cant bot";
+}
+
+.tamanoImg{
+    height: 70px;
+}
+
+    /*MEDIOS DE PAGO*/
+
+
+}
