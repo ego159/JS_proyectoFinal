@@ -139,7 +139,7 @@ body {
     text-align: center; }
   body h1 {
     text-align: center;
-    font-family: var(--tipografia);
+    font-family: "Constance", sans-serif;
     font-weight: bold;
     text-decoration: underline;
     padding-bottom: 20px; }
@@ -149,7 +149,7 @@ body {
     font-style: italic;
     font-size: 15px; }
   body h3 {
-    font-family: var(--tipografia);
+    font-family: "Constance", sans-serif;
     font-style: italic;
     font-size: 20px; }
   body .boton {
@@ -184,7 +184,7 @@ body {
     height: 300px; }
   h1 {
     text-align: center;
-    font-family: var(--tipografia);
+    font-family: "Constance", sans-serif;
     font-style: italic;
     text-decoration: underline;
     font-size: 20px; }

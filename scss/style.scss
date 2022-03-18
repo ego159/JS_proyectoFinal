@@ -29,7 +29,7 @@ body{
     
     h1{
         text-align: center;
-        font-family: var(--tipografia);
+        font-family: $letraNatu;
         font-weight:bold;
         text-decoration: underline;
         padding-bottom: 20px;
@@ -45,7 +45,7 @@ body{
     }
     
     h3{
-        font-family: var(--tipografia);
+        font-family: $letraNatu;
         font-style: italic;
         font-size: 20px;
     
@@ -110,7 +110,7 @@ header img{
 
 h1{
     text-align: center;
-    font-family: var(--tipografia);
+    font-family: $letraNatu;
     font-style: italic;
     text-decoration: underline;
     font-size: 20px;
