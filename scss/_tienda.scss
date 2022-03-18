@@ -1,0 +1,54 @@
+.login-form{
+    width: 50%;
+}
+.grilla-tienda{
+    display: grid;
+    grid-template-columns: 90%;
+    grid-template-rows: 150px 150px 150px 150px;
+    grid-template-areas: "prod1"
+                         "prod2"
+                         "prod3"
+                         "prod4";
+    justify-content: center;
+    align-items: center;
+}
+
+.grilla-item{
+    display: grid;
+    grid-template-columns: 20% 45% 5% 20%;
+    grid-template-rows: 95%;
+    grid-template-areas: "img desc cant bot";
+    justify-content: space-between;
+    align-items: center;
+
+    h3{
+        font-size: 13px;
+        font-family: $letraTextos;
+        font-style: normal;
+        font-weight: 300;
+        grid-area: desc;
+    }
+}
+
+
+.tamanoImg{
+    height: 90px;
+    grid-area: img;
+    border-radius: 5px;
+}
+
+.cantidad{
+    grid-area: cant;
+}
+
+#boton-tienda{
+    background-color: bisque;
+    color:black;
+    border-color: rgb(255, 206, 147);
+
+    &:hover{
+        background-color: rgb(255, 206, 147);
+        border-color: bisque;
+        color: black;
+    }
+}

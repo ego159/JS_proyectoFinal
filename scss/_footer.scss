@@ -1,0 +1,50 @@
+/*FOOTER*/
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $natuColor ;
+    
+    h3{
+        font-weight: 200;
+        padding-right: 10px;
+    }
+
+    #derechosMarca{
+        font-size: 10px;
+        font-family: $letraTextos;
+    }
+    
+
+    .footer-redes{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 15%;
+        height: 5rem;
+
+        .footer-redes{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 15%;
+            height: 5rem;
+        }
+
+        .logoRedes{
+            font-size: 40px;
+            color: black;
+        }
+    
+    }
+}
+
+
+
+
+
+
+
+
+
