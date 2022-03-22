@@ -1,0 +1,35 @@
+/*
+$color: color del botón*
+$colorHover: color del botón al hacer Hover
+*/
+
+@mixin botones ($color, $colorHover){
+    background-color: $color;
+    font-size: 1rem;
+    color:black;
+    font-family: $letraBtn;
+    border-color: $borderColor;
+
+    &:hover{
+        background-color: $colorHover;
+        border-color: $borderColor;
+    }
+
+}
+
+#boton-login{
+    @include botones($btnColor, $btnColorHover );
+}
+
+#boton-reset{
+    @include botones($btnColorReset, $btnColorResetHover);
+  
+}
+
+.boton-tienda{
+    @include botones($btnColor, $btnColorHover);
+    border-radius: 5px;
+    border: none;
+    grid-area: bot;
+    
+}

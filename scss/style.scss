@@ -4,6 +4,11 @@
 @import './tienda';
 @import './novedades';
 @import './productos';
+@import './botones';
+
+/*INFORMACION PARA TUTORA*/
+/*EXTEND FUE UTILIZADO EN _tienda.scss en la clase .grilla-item-agotado*/
+/*MIXIM FUE UTILIZADO EN _botones.scss*/
 
 
 *{
@@ -51,18 +56,7 @@ body{
     
     }
     
-    .boton{
-        background-color: $btnColor;
-        border-radius: 5px;
-        border: none;
-        font-family: $letraBtn;
-        grid-area: bot;
-        height: 25px;
-    
-        &:hover{
-            background-color: $btnColorHover;
-        }
-    }
+
     
     
     /*IMAGEN PRINCIAPL INDEX*/

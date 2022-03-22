@@ -20,7 +20,7 @@
     grid-template-areas: "img desc cant bot";
     justify-content: space-between;
     align-items: center;
-
+    
     h3{
         font-size: 13px;
         font-family: $letraTextos;
@@ -30,6 +30,18 @@
     }
 }
 
+.grilla-item-agotado{
+    @extend .grilla-item;
+    background-color: red;
+
+    h3{
+        text-decoration: line-through;
+    }
+
+    .boton-tienda{
+        visibility: hidden;
+    }
+}
 
 .tamanoImg{
     height: 90px;
@@ -41,14 +53,4 @@
     grid-area: cant;
 }
 
-#boton-tienda{
-    background-color: bisque;
-    color:black;
-    border-color: rgb(255, 206, 147);
 
-    &:hover{
-        background-color: rgb(255, 206, 147);
-        border-color: bisque;
-        color: black;
-    }
-}

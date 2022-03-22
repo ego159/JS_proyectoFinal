@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* COLORES */
 /*TIPOGRAFIA*/
 /*HEADER*/
@@ -68,19 +69,26 @@ footer {
   justify-content: center;
   align-items: center; }
 
-.grilla-item {
+.grilla-item, .grilla-item-agotado {
   display: grid;
   grid-template-columns: 20% 45% 5% 20%;
   grid-template-rows: 95%;
   grid-template-areas: "img desc cant bot";
   justify-content: space-between;
   align-items: center; }
-  .grilla-item h3 {
+  .grilla-item h3, .grilla-item-agotado h3 {
     font-size: 13px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: normal;
     font-weight: 300;
     grid-area: desc; }
+
+.grilla-item-agotado {
+  background-color: red; }
+  .grilla-item-agotado h3 {
+    text-decoration: line-through; }
+  .grilla-item-agotado .boton-tienda {
+    visibility: hidden; }
 
 .tamanoImg {
   height: 90px;
@@ -89,15 +97,6 @@ footer {
 
 .cantidad {
   grid-area: cant; }
-
-#boton-tienda {
-  background-color: bisque;
-  color: black;
-  border-color: #ffce93; }
-  #boton-tienda:hover {
-    background-color: #ffce93;
-    border-color: bisque;
-    color: black; }
 
 /*SECCION NOVEDADES DE NOVEDADES.HTML*/
 .img-novedades {
@@ -120,6 +119,46 @@ footer {
   .galeria-img:hover {
     transform: scale(1.5, 1.5); }
 
+/*
+$color: color del botón*
+$colorHover: color del botón al hacer Hover
+*/
+#boton-login {
+  background-color: bisque;
+  font-size: 1rem;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-color: bisque; }
+  #boton-login:hover {
+    background-color: #ffce93;
+    border-color: bisque; }
+
+#boton-reset {
+  background-color: #cccccc;
+  font-size: 1rem;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-color: bisque; }
+  #boton-reset:hover {
+    background-color: #f8f6f4;
+    border-color: bisque; }
+
+.boton-tienda {
+  background-color: bisque;
+  font-size: 1rem;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-color: bisque;
+  border-radius: 5px;
+  border: none;
+  grid-area: bot; }
+  .boton-tienda:hover {
+    background-color: #ffce93;
+    border-color: bisque; }
+
+/*INFORMACION PARA TUTORA*/
+/*EXTEND FUE UTILIZADO EN _tienda.scss en la clase .grilla-item-agotado*/
+/*MIXIM FUE UTILIZADO EN _botones.scss*/
 * {
   margin: 0;
   padding: 0; }
@@ -152,15 +191,6 @@ body {
     font-family: "Constance", sans-serif;
     font-style: italic;
     font-size: 20px; }
-  body .boton {
-    background-color: bisque;
-    border-radius: 5px;
-    border: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    grid-area: bot;
-    height: 25px; }
-    body .boton:hover {
-      background-color: #ffce93; }
   body #imgPrincipal {
     width: 100%; }
   body .mapa {
@@ -207,7 +237,7 @@ body {
   .section-login {
     display: flex;
     justify-content: center; }
-  .grilla-item {
+  .grilla-item, .grilla-item-agotado {
     display: grid;
     grid-template-columns: 25% 15% 50%;
     grid-template-rows: 1fr 1fr;
