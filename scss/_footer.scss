@@ -1,11 +1,14 @@
 /*FOOTER*/
 
 footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: $natuColor ;
-    
+        
     h3{
         font-weight: 200;
         padding-right: 10px;
