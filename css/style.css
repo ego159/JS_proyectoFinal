@@ -244,6 +244,13 @@ body {
     height: 90%;
     width: 90%; }
   /*TIENDA*/
+  .galeria-img {
+    height: 90%;
+    width: 90%;
+    border-radius: 10px;
+    transition: all 1.5s; }
+    .galeria-img:hover {
+      transform: scale(1.4, 1.4); }
   /* EN DESUSO POR USAR FORM DE BOOTSTRAP
 .login{
     width: 250px;
