@@ -59,11 +59,18 @@ footer {
       color: black; }
 
 .login-form {
-  width: 50%; }
+  justify-content: center;
+  background-color: rgba(250, 220, 38, 0.973); }
+
+.mi-shadow-login:focus {
+  box-shadow: 0px 0px 2px 6px #f1f1a0; }
+
+.mi-shadow {
+  box-shadow: 0px 0px 20px 4px rgba(250, 220, 38, 0.973); }
 
 .grilla-tienda {
   display: grid;
-  grid-template-columns: 90%;
+  grid-template-columns: 80%;
   grid-template-rows: 150px 150px 150px 150px;
   grid-template-areas: "prod1" "prod2" "prod3" "prod4";
   justify-content: center;
@@ -75,7 +82,8 @@ footer {
   grid-template-rows: 95%;
   grid-template-areas: "img desc cant bot";
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  box-shadow: 1rem; }
   .grilla-item h3, .grilla-item-agotado h3 {
     font-size: 13px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -91,7 +99,7 @@ footer {
     visibility: hidden; }
 
 .tamanoImg {
-  height: 90px;
+  height: 83px;
   grid-area: img;
   border-radius: 5px; }
 
@@ -100,8 +108,11 @@ footer {
 
 /*SECCION NOVEDADES DE NOVEDADES.HTML*/
 .img-novedades {
-  height: 370px;
-  width: 370px; }
+  height: 250px;
+  width: 250px; }
+
+.tamano-carouser {
+  width: 50%; }
 
 /*AGREGO ESTA CLASE PARA QUE LA INDICACION DE POSICION DEL CARRUSEL NO PISE EL TEXTO DE LAS CARD*/
 .card-margin-bottom {
@@ -115,9 +126,12 @@ footer {
   height: 90%;
   width: 90%;
   border-radius: 10px;
-  transition: all 1.5s; }
+  transition: all 1s; }
   .galeria-img:hover {
-    transform: scale(1.5, 1.5); }
+    transform: scale(1.05, 1.05); }
+
+.mi-shadow-contacto:focus {
+  box-shadow: 0px 0px 2px 6px rgba(250, 220, 38, 0.973); }
 
 /*
 $color: color del botón*
@@ -227,20 +241,25 @@ body {
     height: 90%;
     width: 90%; }
   /*TIENDA*/
-  .login {
+  /* EN DESUSO POR USAR FORM DE BOOTSTRAP
+.login{
     width: 250px;
     height: 100px;
     margin: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; }
-  .section-login {
+    justify-content: space-between;
+}
+
+.section-login{
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+}
+ */
   .grilla-item, .grilla-item-agotado {
     display: grid;
     grid-template-columns: 25% 15% 50%;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "img desc desc" "img cant bot"; }
   .tamanoImg {
-    height: 70px; } }
+    height: 60px; } }

@@ -4,7 +4,9 @@
 @import './tienda';
 @import './novedades';
 @import './productos';
+@import './contacto';
 @import './botones';
+
 
 /*INFORMACION PARA TUTORA*/
 /*EXTEND FUE UTILIZADO EN _tienda.scss en la clase .grilla-item-agotado*/
@@ -85,6 +87,7 @@ body{
 
 
 
+
 /********************************************/
 /********************  MD  ******************/
 /********************************************/
@@ -126,6 +129,8 @@ h2{
 
 
 /*TIENDA*/
+
+/* EN DESUSO POR USAR FORM DE BOOTSTRAP
 .login{
     width: 250px;
     height: 100px;
@@ -139,6 +144,7 @@ h2{
     display: flex;
     justify-content: center;
 }
+ */
     
 .grilla-item{
     display: grid;
@@ -149,7 +155,7 @@ h2{
 }
 
 .tamanoImg{
-    height: 70px;
+    height: 60px;
 }
 
 }

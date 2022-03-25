@@ -9,9 +9,9 @@
     height: 90% ;
     width: 90%;
     border-radius: 10px;
-    transition: all 1.5s;
+    transition: all 1s;
 
     &:hover{
-        transform: scale(1.5,1.5);
+        transform: scale(1.05,1.05);
     }
 }
