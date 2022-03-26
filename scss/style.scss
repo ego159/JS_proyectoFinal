@@ -22,10 +22,14 @@
     --tipografia: 'Constance', sans-serif;
 }
 
+
 /*BODY*/
 body{
     background-color: $natuColorClaro;
-
+    position: relative; /*Para solucionar que el footer con position absolute se ubica con respecto al viewport y en paginas con mucho contenido al hacer scroll me queda el footer en el medio*/
+    padding-bottom: 90px; /*para que el footer no me tape contenido*/
+    min-height: 100vh; /*para que el body mida como minimo lo que mida el viewport*/
+    
     .aboutUs-section{
         display: flex ;
         flex-direction: column;

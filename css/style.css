@@ -32,9 +32,12 @@ header {
 
 /*FOOTER*/
 footer {
-  position: fixed;
-  bottom: 0px;
+  position: absolute;
+  /*para acomodar el footer abajo de todo en paginas con poco contenido*/
+  bottom: 0;
+  /*para acomodar el footer abajo de todo en paginas con poco contenido*/
   width: 100%;
+  /*acomodar el ancho del footer que pierde al usar position absolute*/
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -186,6 +189,12 @@ $colorHover: color del botón al hacer Hover
 /*BODY*/
 body {
   background-color: #f1f1a0;
+  position: relative;
+  /*Para solucionar que el footer con position absolute se ubica con respecto al viewport y en paginas con mucho contenido al hacer scroll me queda el footer en el medio*/
+  padding-bottom: 90px;
+  /*para que el footer no me tape contenido*/
+  min-height: 100vh;
+  /*para que el body mida como minimo lo que mida el viewport*/
   /*IMAGEN PRINCIAPL INDEX*/
   /*MAPA INDEX*/ }
   body .aboutUs-section {
