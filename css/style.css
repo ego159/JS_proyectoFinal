@@ -133,6 +133,9 @@ footer {
 .mi-shadow-contacto:focus {
   box-shadow: 0px 0px 2px 6px rgba(250, 220, 38, 0.973); }
 
+.mi-text-area {
+  resize: none; }
+
 /*
 $color: color del botón*
 $colorHover: color del botón al hacer Hover
@@ -211,8 +214,12 @@ body {
     font-family: "Constance", sans-serif;
     font-style: italic;
     font-size: 20px; }
+  body .section-img-principal {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(250, 220, 38, 0.973); }
   body #imgPrincipal {
-    width: 100%; }
+    width: 50%; }
   body .mapa {
     display: flex;
     flex-direction: column;
@@ -228,54 +235,57 @@ body {
 /********************************************/
 @media screen and (max-width: 600px) {
   /*HOME*/
-  header img {
-    height: 50px; }
-  #mi-text-area {
-    height: 300px; }
-  h1 {
-    text-align: center;
-    font-family: "Constance", sans-serif;
-    font-style: italic;
-    text-decoration: underline;
-    font-size: 20px; }
-  h2 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: italic;
-    font-size: 10px; }
-  /*PRODUCTOS*/
-  .galeria-img {
-    height: 90%;
-    width: 90%; }
-  /*TIENDA*/
-  .galeria-img {
-    height: 90%;
-    width: 90%;
-    border-radius: 10px;
-    transition: all 1.5s; }
-    .galeria-img:hover {
-      transform: scale(1.2, 1.2); }
-  /* EN DESUSO POR USAR FORM DE BOOTSTRAP
-.login{
-    width: 250px;
-    height: 100px;
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+  body {
+    /*PRODUCTOS*/
+    /*TIENDA*/
+    /* EN DESUSO POR USAR FORM DE BOOTSTRAP
+    .login{
+        width: 250px;
+        height: 100px;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
-.section-login{
-    display: flex;
-    justify-content: center;
-}
- */
-  .grilla-item, .grilla-item-agotado {
-    display: grid;
-    grid-template-columns: 25% 15% 50%;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "img desc desc" "img cant bot"; }
-  .tamanoImg {
-    height: 60px; }
+    .section-login{
+        display: flex;
+        justify-content: center;
+    }
+    */ }
+    body #imgPrincipal {
+      width: 80%; }
+    body header img {
+      height: 50px; }
+    body #mi-text-area {
+      height: 300px; }
+    body h1 {
+      text-align: center;
+      font-family: "Constance", sans-serif;
+      font-style: italic;
+      text-decoration: underline;
+      font-size: 20px; }
+    body h2 {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-style: italic;
+      font-size: 10px; }
+    body .galeria-img {
+      height: 90%;
+      width: 90%; }
+    body .galeria-img {
+      height: 90%;
+      width: 90%;
+      border-radius: 10px;
+      transition: all 1.5s; }
+      body .galeria-img:hover {
+        transform: scale(1.2, 1.2); }
+    body .grilla-item, body .grilla-item-agotado {
+      display: grid;
+      grid-template-columns: 25% 15% 50%;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "img desc desc" "img cant bot"; }
+    body .tamanoImg {
+      height: 60px; }
   /*FOOTER*/
   footer .footer-redes {
     display: flex;
