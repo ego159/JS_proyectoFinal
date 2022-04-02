@@ -4,7 +4,8 @@
 /*HEADER*/
 header {
   position: sticky;
-  top: 0px; }
+  top: 0px;
+  z-index: 2; }
   header nav {
     background-color: rgba(250, 220, 38, 0.973); }
     header nav .logo {
@@ -67,30 +68,35 @@ footer {
   box-shadow: 0px 0px 2px 6px #f1f1a0; }
 
 .mi-shadow {
-  box-shadow: 0px 0px 20px 4px rgba(250, 220, 38, 0.973); }
+  box-shadow: 0px 0px 10px 15px rgba(250, 220, 38, 0.973); }
 
 .grilla-tienda {
   display: grid;
   grid-template-columns: 80%;
-  grid-template-rows: 150px 150px 150px 150px;
-  grid-template-areas: "prod1" "prod2" "prod3" "prod4";
+  grid-template-rows: 100px 100px 100px 100px;
+  grid-template-areas: "prod1" "prod2" "prod3" "prod4" "prod5" "prod6";
   justify-content: center;
   align-items: center; }
 
-.grilla-item, .grilla-item-agotado {
+.grilla-item, .grilla-item-claro, .grilla-item-oscuro, .grilla-item-agotado {
   display: grid;
   grid-template-columns: 20% 45% 5% 20%;
-  grid-template-rows: 95%;
+  grid-template-rows: 100px;
   grid-template-areas: "img desc cant bot";
   justify-content: space-between;
-  align-items: center;
-  box-shadow: 1rem; }
-  .grilla-item h3, .grilla-item-agotado h3 {
+  align-items: center; }
+  .grilla-item h3, .grilla-item-claro h3, .grilla-item-oscuro h3, .grilla-item-agotado h3 {
     font-size: 13px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: normal;
     font-weight: 300;
     grid-area: desc; }
+
+.grilla-item-claro {
+  background-color: #f1f1a0; }
+
+.grilla-item-oscuro {
+  background-color: rgba(250, 220, 38, 0.973); }
 
 .grilla-item-agotado {
   background-color: red; }
@@ -120,9 +126,6 @@ footer {
   margin-bottom: 2rem; }
 
 /*GALERIA EN PRODUCTOS.HTML*/
-.section-productos {
-  margin-top: 3rem; }
-
 .galeria-img {
   height: 90%;
   width: 90%;
@@ -169,10 +172,88 @@ $colorHover: color del botón al hacer Hover
   border-color: bisque;
   border-radius: 5px;
   border: none;
-  grid-area: bot; }
+  grid-area: bot;
+  margin: 0.75rem; }
   .boton-tienda:hover {
     background-color: #ffce93;
     border-color: bisque; }
+
+/* CODIGO EXTRAIDO DE  https://codepen.io/gatoledo1/pen/MWKpLNY 
+SE REALIZARON MODIFICACIONES EN EL SCSS Y HTML PARA ADAPTARLO A MI SITIO Y DISEÑO*/
+body {
+  background: aliceblue; }
+
+.gtco-testimonials {
+  position: relative;
+  margin-top: 30px; }
+  .gtco-testimonials .owl-stage-outer {
+    padding: 5px 0; }
+  .gtco-testimonials .owl-nav {
+    /* display: none; */ }
+  .gtco-testimonials .owl-dots {
+    text-align: center; }
+    .gtco-testimonials .owl-dots span {
+      position: relative;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      display: block;
+      background: #fff;
+      border: 2px solid rgba(250, 220, 38, 0.973);
+      margin: 0 5px; }
+    .gtco-testimonials .owl-dots .active {
+      box-shadow: none; }
+      .gtco-testimonials .owl-dots .active span {
+        background: #f1f1a0;
+        box-shadow: none;
+        height: 12px;
+        width: 12px;
+        margin-bottom: -1px; }
+  .gtco-testimonials .card {
+    background: #f1f1a0;
+    box-shadow: 0 0 10px 20px rgba(250, 220, 38, 0.973);
+    margin: 0 20px;
+    align-items: center;
+    border: 0; }
+    .gtco-testimonials .card .card-img-top {
+      width: 200px;
+      height: 200px; }
+    .gtco-testimonials .card h5 {
+      color: black;
+      font-size: 21px;
+      line-height: 1.3; }
+      .gtco-testimonials .card h5 span {
+        font-size: 18px;
+        color: #666666; }
+    .gtco-testimonials .card p {
+      font-size: 18px;
+      color: #555;
+      padding-bottom: 15px; }
+  .gtco-testimonials .active {
+    opacity: 0.4;
+    transition: all 0.3s; }
+  .gtco-testimonials .center {
+    opacity: 1; }
+    .gtco-testimonials .center h5 {
+      font-size: 24px; }
+      .gtco-testimonials .center h5 span {
+        font-size: 20px; }
+    .gtco-testimonials .center .card-img-top {
+      height: 100%;
+      width: 100%; }
+
+@media (max-width: 767px) {
+  .gtco-testimonials {
+    margin-top: 20px; } }
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+  outline: 0; }
+
+.owl-carousel button.owl-dot {
+  outline: 0; }
+
+.owl-carousel .card {
+  box-shadow: none; }
 
 /*INFORMACION PARA TUTORA*/
 /*EXTEND FUE UTILIZADO EN _tienda.scss en la clase .grilla-item-agotado*/
@@ -186,7 +267,7 @@ $colorHover: color del botón al hacer Hover
 
 /*BODY*/
 body {
-  background-color: #f1f1a0;
+  background-image: url(../img/fondo.png);
   position: relative;
   /*Para solucionar que el footer con position absolute se ubica con respecto al viewport y en paginas con mucho contenido al hacer scroll me queda el footer en el medio*/
   padding-bottom: 90px;
@@ -195,18 +276,22 @@ body {
   /*para que el body mida como minimo lo que mida el viewport*/
   /*IMAGEN PRINCIAPL INDEX*/
   /*MAPA INDEX*/ }
+  body .box-page, body .aboutUs-section {
+    background-color: #f1f1a0;
+    margin: 4rem;
+    border-radius: 1rem; }
   body .aboutUs-section {
     display: flex;
     flex-direction: column;
-    margin-top: 4rem;
     text-align: center; }
   body h1 {
+    padding-top: 1rem;
     text-align: center;
     font-family: "Constance", sans-serif;
     font-weight: bold;
     text-decoration: underline; }
   body h2 {
-    padding: 2rem;
+    padding: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: italic;
     font-size: 15px; }
@@ -237,38 +322,32 @@ body {
   /*HOME*/
   body {
     /*PRODUCTOS*/
-    /*TIENDA*/
-    /* EN DESUSO POR USAR FORM DE BOOTSTRAP
-    .login{
-        width: 250px;
-        height: 100px;
-        margin: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .section-login{
-        display: flex;
-        justify-content: center;
-    }
-    */ }
+    /*TIENDA*/ }
+    body header {
+      position: sticky;
+      top: 0px;
+      z-index: 2; }
+      body header nav {
+        background-color: rgba(250, 220, 38, 0.973); }
+        body header nav .logo {
+          height: 70px; }
     body #imgPrincipal {
       width: 80%; }
-    body header img {
-      height: 50px; }
     body #mi-text-area {
       height: 300px; }
+    body .box-page, body .aboutUs-section {
+      background-color: #f1f1a0;
+      margin: 2rem;
+      border-radius: 1rem; }
     body h1 {
       text-align: center;
       font-family: "Constance", sans-serif;
       font-style: italic;
-      text-decoration: underline;
-      font-size: 20px; }
+      text-decoration: underline; }
     body h2 {
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       font-style: italic;
-      font-size: 10px; }
+      font-size: 13px; }
     body .galeria-img {
       height: 90%;
       width: 90%; }
@@ -279,10 +358,10 @@ body {
       transition: all 1.5s; }
       body .galeria-img:hover {
         transform: scale(1.2, 1.2); }
-    body .grilla-item, body .grilla-item-agotado {
+    body .grilla-item, body .grilla-item-claro, body .grilla-item-oscuro, body .grilla-item-agotado {
       display: grid;
       grid-template-columns: 25% 15% 50%;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: 50px 50px;
       grid-template-areas: "img desc desc" "img cant bot"; }
     body .tamanoImg {
       height: 60px; }

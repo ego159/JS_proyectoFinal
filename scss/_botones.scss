@@ -23,7 +23,6 @@ $colorHover: color del botón al hacer Hover
 
 #boton-reset{
     @include botones($btnColorReset, $btnColorResetHover);
-  
 }
 
 .boton-tienda{
@@ -31,5 +30,5 @@ $colorHover: color del botón al hacer Hover
     border-radius: 5px;
     border: none;
     grid-area: bot;
-    
+    margin: 0.75rem;
 }

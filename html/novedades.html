@@ -12,40 +12,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/constance" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>Dietetica Naturable | Novedades</title>
 </head>
 <body>
     <header>
-             <!--APLICO BOOTSTRAP PARA CAMBIAR EL TIPO DE MENU-->
-             <nav class="navbar navbar-expand-lg navbar-light "> <!--saque la clase bg-light para que el fondo del nav sea amarillo-->
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="../index.html"><img class="logo" src="../img/logo.png" alt="ImagenLogo"></a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse justify-content-end" id="navbarNav"><!--AGREGUE LA CLASE JUSTIFY-CONTENT-END PARA ALINEAR A LA DERECHA-->
-                    <ul class="navbar-nav"> 
-                      <li class="nav-item ">
-                        <a class="nav-link text-end active" aria-current="page" href="../index.html">Inicio</a> <!--Agrego clase text-end para que el texto me quede a la derecha cuando se despliega el menu-->
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link text-end" href="./novedades.html">Novedades</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link text-end" href="./productos.html">Productos</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link text-end" href="./tienda.html">Tienda</a>
-                      </li>
-                      <li class="nav-item text-end">
-                        <a class="nav-link" href="./contacto.html" >Contacto</a>
-                      </li>
-                    </ul>
-                  </div>
+            <!--APLICO BOOTSTRAP PARA CAMBIAR EL TIPO DE MENU-->
+            <nav class="navbar navbar-expand-lg navbar-light"> <!--saque la clase bg-light para que el fondo del nav sea amarillo-->
+              <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img class="logo" src="../img/logo.png" alt="ImagenLogo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav"><!--AGREGUE LA CLASE JUSTIFY-CONTENT-END PARA ALINEAR A LA DERECHA-->
+                  <ul class="navbar-nav"> 
+                    <li class="nav-item ">
+                      <a class="nav-link text-end active" aria-current="page" href="../index.html">Inicio</a> <!--Agrego clase text-end para que el texto me quede a la derecha cuando se despliega el menu-->
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-end" href="./novedades.html">Novedades</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-end" href="./productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-end" href="./tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item text-end">
+                      <a class="nav-link" href="./contacto.html" >Contacto</a>
+                    </li>
+                  </ul>
                 </div>
-              </nav>
+              </div>
+            </nav>
 
     </header>
     <main>
@@ -54,62 +58,50 @@
             
           <h1>Novedades</h1>
 
-         
-                <div id="carouselExampleDark" class="carousel carousel-dark slide tamano-carousel" data-bs-ride="carousel">
-                  <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  </div>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active"  data-bs-interval="10000">
-                      <div class="card card-margin-bottom mx-auto" style="width: 16rem;"> <!--AGREGO CLASE MX-AUTO PARA CENTRAR CARD DENTRO DE SLIDE-->
-                        <img src="../img/nuevaSucursal.png" class="card-img-top" alt="ImgNovedad">
-                        <div class="card-body">
-                          <h5 class="card-title">Nueva Sucursal</h5>
-                          <p class="card-text">Abrimos una Nueva Sucural en San Juan 557. Te Esperamos!</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="2000">
-                      <div class="card card-margin-bottom mx-auto" style="width: 16rem;">
-                        <img src="../img/novedad1.png" class="card-img-top" alt="ImgNovedad">
-                        <div class="card-body">
-                          <h5 class="card-title">Oferta Apertura</h5>
-                          <p class="card-text">Te Dejamos Nuestra Oferta de Apertura!</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item" >
-                      <div class="card card-margin-bottom mx-auto" style="width: 16rem;">
-                        <img src="../img/novedad2.png" class="card-img-top" alt="ImgNovedad">
-                        <div class="card-body">
-                          <h5 class="card-title">Amplia Variedad</h5>
-                          <p class="card-text">Ampliamos Nuestra Variedad de Productos</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div> 
-              
+          <div class="gtco-testimonials">
             
-           
+            <div class="owl-carousel owl-carousel1 owl-theme">
+              <div>
+                <div class="card text-center">
+                  <img class="card-img-top" src="../img/nuevaSucursal.png" alt="ImgNovedad">
+                  <div class="card-body">
+                    <h5>Nueva Sucursal</h5>
+                    <p class="card-text">Abrimos una Nueva Sucural en San Juan 557. Te Esperamos!</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="card text-center">
+                  <img class="card-img-top" src="../img/novedad1.png" alt="ImgNovedad">
+                  <div class="card-body">
+                    <h5>Oferta Apertura</h5>
+                    <p class="card-text">Te Dejamos Nuestra Oferta de Apertura!</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="card text-center"><img class="card-img-top" src="../img/novedad2.png" alt="ImgNovedad">
+                  <div class="card-body">
+                    <h5>Amplia Variedad</h5>
+                    <p class="card-text">Ampliamos Nuestra Variedad de Productos</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card text-center"><img class="card-img-top" src="../img/local.png" alt="Img-Novedades">
+                  <div class="card-body">
+                    <h5>¿Ya nos visitaste?</h5>
+                    <p class="card-text">Ya Pasaste Por Nuestro Nuevo Local? Vení a Sorprenderte con Nuestros Productos </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-
-
+        </div>
 
       </section>
-
-        
         
     </main>
 
@@ -120,5 +112,6 @@
         </div>   
         <h3 id="derechosMarca">Marca Registrada - Powered by ego159</h3>
     </footer>
+    <script src="../js/carousel.js"></script>
 </body>
 </html>

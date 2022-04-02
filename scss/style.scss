@@ -6,6 +6,7 @@
 @import './productos';
 @import './contacto';
 @import './botones';
+@import './_carousel';
 
 
 /*INFORMACION PARA TUTORA*/
@@ -25,31 +26,35 @@
 
 /*BODY*/
 body{
-    background-color: $natuColorClaro;
+    background-image: url(../img/fondo.png);
     position: relative; /*Para solucionar que el footer con position absolute se ubica con respecto al viewport y en paginas con mucho contenido al hacer scroll me queda el footer en el medio*/
     padding-bottom: 90px; /*para que el footer no me tape contenido*/
     min-height: 100vh; /*para que el body mida como minimo lo que mida el viewport*/
     
+    .box-page{
+        background-color: $natuColorClaro;
+        margin: 4rem;
+        border-radius: 1rem;
+    }
+
     .aboutUs-section{
+        @extend .box-page;
         display: flex ;
         flex-direction: column;
-        margin-top: 4rem;
         text-align: center;
     
     }
     
     h1{
+        padding-top: 1rem;
         text-align: center;
         font-family: $letraNatu;
         font-weight:bold;
         text-decoration: underline;
-       
-        
-        
     }
     
     h2{
-        padding: 2rem;
+        padding: 1rem;
         font-family: $letraTextos;
         font-style: italic;
         font-size: 15px;
@@ -59,12 +64,9 @@ body{
         font-family: $letraNatu;
         font-style: italic;
         font-size: 20px;
-    
     }
     
 
-    
-    
     /*IMAGEN PRINCIAPL INDEX*/
     .section-img-principal{
         display: flex;
@@ -75,8 +77,7 @@ body{
     #imgPrincipal{
         width: 50%;
     }
-   
-    
+
     /*MAPA INDEX*/
     .mapa{
         display: flex;
@@ -93,7 +94,6 @@ body{
     #tamano-mapa{
         width: 90%;
     }
-
 }
 
 
@@ -104,35 +104,51 @@ body{
 /********************************************/
 @media screen and (max-width: 600px){
 
+
 /*HOME*/
 
 body{
+
+    header{
+        position: sticky;
+        top: 0px;
+        z-index: 2;
+        
+    
+        nav{
+            background-color: $natuColor;
+    
+            .logo{
+                height: 70px;
+            }
+        }
+    }
     #imgPrincipal{
         width: 80%;
     }
         
-    header img{
-            height: 50px;
-    }
-
     #mi-text-area{
         height: 300px;
     }
 
+    .box-page{
+        background-color: $natuColorClaro;
+        margin: 2rem;
+        border-radius: 1rem;
+    }
 
     h1{
         text-align: center;
         font-family: $letraNatu;
         font-style: italic;
         text-decoration: underline;
-        font-size: 20px;
     }
         
         
     h2{
         font-family: $letraTextos;
         font-style: italic;
-        font-size: 10px;
+        font-size: 13px;
     }
 
     /*PRODUCTOS*/
@@ -155,26 +171,12 @@ body{
             transform: scale(1.2,1.2);
         }
     }
-    /* EN DESUSO POR USAR FORM DE BOOTSTRAP
-    .login{
-        width: 250px;
-        height: 100px;
-        margin: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
 
-    .section-login{
-        display: flex;
-        justify-content: center;
-    }
-    */
         
     .grilla-item{
         display: grid;
         grid-template-columns: 25% 15% 50%;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 50px 50px;
         grid-template-areas: "img desc desc"
                             "img cant bot";
     }
