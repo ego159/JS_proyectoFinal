@@ -113,17 +113,79 @@ footer {
 .cantidad {
   grid-area: cant; }
 
-/*SECCION NOVEDADES DE NOVEDADES.HTML*/
-.img-novedades {
-  height: 250px;
-  width: 250px; }
+/* CODIGO EXTRAIDO DE  https://codepen.io/gatoledo1/pen/MWKpLNY 
+SE REALIZARON MODIFICACIONES EN EL SCSS Y HTML PARA ADAPTARLO A MI SITIO Y DISEÑO*/
+.section-novedades .gtco-testimonials {
+  position: relative;
+  margin-top: 30px; }
+  .section-novedades .gtco-testimonials .owl-stage-outer {
+    padding: 5px 0; }
+  .section-novedades .gtco-testimonials .owl-nav {
+    /* display: none; */ }
+  .section-novedades .gtco-testimonials .owl-dots {
+    text-align: center; }
+    .section-novedades .gtco-testimonials .owl-dots span {
+      position: relative;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      display: block;
+      background: #fff;
+      border: 2px solid rgba(250, 220, 38, 0.973);
+      margin: 0 5px; }
+    .section-novedades .gtco-testimonials .owl-dots .active {
+      box-shadow: none; }
+      .section-novedades .gtco-testimonials .owl-dots .active span {
+        background: #f1f1a0;
+        box-shadow: none;
+        height: 12px;
+        width: 12px;
+        margin-bottom: -1px; }
+  .section-novedades .gtco-testimonials .card {
+    background: #f1f1a0;
+    box-shadow: 0 0 10px 20px rgba(250, 220, 38, 0.973);
+    margin: 0 70px;
+    align-items: center;
+    border: 0; }
+    .section-novedades .gtco-testimonials .card .card-img-top {
+      width: 200px;
+      height: 200px; }
+    .section-novedades .gtco-testimonials .card h5 {
+      color: black;
+      font-size: 21px;
+      line-height: 1.3; }
+      .section-novedades .gtco-testimonials .card h5 span {
+        font-size: 18px;
+        color: #666666; }
+    .section-novedades .gtco-testimonials .card p {
+      font-size: 18px;
+      color: #555;
+      padding-bottom: 15px; }
+  .section-novedades .gtco-testimonials .active {
+    opacity: 0.4;
+    transition: all 0.3s; }
+  .section-novedades .gtco-testimonials .center {
+    opacity: 1; }
+    .section-novedades .gtco-testimonials .center h5 {
+      font-size: 24px; }
+      .section-novedades .gtco-testimonials .center h5 span {
+        font-size: 20px; }
+    .section-novedades .gtco-testimonials .center .card-img-top {
+      height: 100%;
+      width: 100%; }
 
-.tamano-carouser {
-  width: 50%; }
+@media (max-width: 767px) {
+  .gtco-testimonials {
+    margin-top: 20px; } }
 
-/*AGREGO ESTA CLASE PARA QUE LA INDICACION DE POSICION DEL CARRUSEL NO PISE EL TEXTO DE LAS CARD*/
-.card-margin-bottom {
-  margin-bottom: 2rem; }
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+  outline: 0; }
+
+.owl-carousel button.owl-dot {
+  outline: 0; }
+
+.owl-carousel .card {
+  box-shadow: none; }
 
 /*GALERIA EN PRODUCTOS.HTML*/
 .galeria-img {
@@ -177,83 +239,6 @@ $colorHover: color del botón al hacer Hover
   .boton-tienda:hover {
     background-color: #ffce93;
     border-color: bisque; }
-
-/* CODIGO EXTRAIDO DE  https://codepen.io/gatoledo1/pen/MWKpLNY 
-SE REALIZARON MODIFICACIONES EN EL SCSS Y HTML PARA ADAPTARLO A MI SITIO Y DISEÑO*/
-body {
-  background: aliceblue; }
-
-.gtco-testimonials {
-  position: relative;
-  margin-top: 30px; }
-  .gtco-testimonials .owl-stage-outer {
-    padding: 5px 0; }
-  .gtco-testimonials .owl-nav {
-    /* display: none; */ }
-  .gtco-testimonials .owl-dots {
-    text-align: center; }
-    .gtco-testimonials .owl-dots span {
-      position: relative;
-      height: 10px;
-      width: 10px;
-      border-radius: 50%;
-      display: block;
-      background: #fff;
-      border: 2px solid rgba(250, 220, 38, 0.973);
-      margin: 0 5px; }
-    .gtco-testimonials .owl-dots .active {
-      box-shadow: none; }
-      .gtco-testimonials .owl-dots .active span {
-        background: #f1f1a0;
-        box-shadow: none;
-        height: 12px;
-        width: 12px;
-        margin-bottom: -1px; }
-  .gtco-testimonials .card {
-    background: #f1f1a0;
-    box-shadow: 0 0 10px 20px rgba(250, 220, 38, 0.973);
-    margin: 0 20px;
-    align-items: center;
-    border: 0; }
-    .gtco-testimonials .card .card-img-top {
-      width: 200px;
-      height: 200px; }
-    .gtco-testimonials .card h5 {
-      color: black;
-      font-size: 21px;
-      line-height: 1.3; }
-      .gtco-testimonials .card h5 span {
-        font-size: 18px;
-        color: #666666; }
-    .gtco-testimonials .card p {
-      font-size: 18px;
-      color: #555;
-      padding-bottom: 15px; }
-  .gtco-testimonials .active {
-    opacity: 0.4;
-    transition: all 0.3s; }
-  .gtco-testimonials .center {
-    opacity: 1; }
-    .gtco-testimonials .center h5 {
-      font-size: 24px; }
-      .gtco-testimonials .center h5 span {
-        font-size: 20px; }
-    .gtco-testimonials .center .card-img-top {
-      height: 100%;
-      width: 100%; }
-
-@media (max-width: 767px) {
-  .gtco-testimonials {
-    margin-top: 20px; } }
-
-.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
-  outline: 0; }
-
-.owl-carousel button.owl-dot {
-  outline: 0; }
-
-.owl-carousel .card {
-  box-shadow: none; }
 
 /*INFORMACION PARA TUTORA*/
 /*EXTEND FUE UTILIZADO EN _tienda.scss en la clase .grilla-item-agotado*/
