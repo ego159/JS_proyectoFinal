@@ -14,6 +14,7 @@ const agregarCarrito = (id) => {
             cantidad: 1,
         })
         productos[posItem].stock = productos[posItem].stock -1;
+        
         getList();
         
 
@@ -23,6 +24,7 @@ const agregarCarrito = (id) => {
         getList();    
     }
     carritoLocalStorage();
+
     console.log(carrito);
 }
 

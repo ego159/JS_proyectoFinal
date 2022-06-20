@@ -10,8 +10,3 @@ function carritoLocalStorage(){
         jsonCarrito (producto.id, JSON.stringify(producto));
     } */
 } 
-
-function productosLocalStorage(){
-
-    localStorage.setItem("productos", JSON.stringify(productos));
-}

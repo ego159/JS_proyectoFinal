@@ -1,7 +1,7 @@
 
 //VARIABLES GLOBALES
-//const productos = [];
-let productos = JSON.parse(localStorage.getItem('productos')) || [];
+const productos = [];
+
 
 
 //CONSTRUCTOR PRODUCTOS
@@ -18,14 +18,6 @@ class Producto{
 productos.push (new Producto(1, "Mate", 100, 10));
 productos.push (new Producto(2, "Te", 20, 5, 15));
 productos.push (new Producto(3, "Granola", 150, 90));
-/*
-fetch("./data.json")
-    .then((res) => res.json())
-    .then((data) => {
-        data.forEach((producto) => {
-        productos.push (new Producto(producto.id, producto.descrip,producto.precio,producto.stock));
-    });
-});*/
 
 const carga = async () =>{
     const res = await fetch("../data.json")
@@ -34,6 +26,7 @@ const carga = async () =>{
         data.forEach((producto) => {
         productos.push (new Producto(producto.id, producto.descrip,producto.precio,producto.stock));
         });
+        //productosLocalStorage();
         getList();
 }
 
@@ -46,6 +39,7 @@ const contenedor = document.getElementById("productosTienda");
 const getList = () => {
 
     contenedor.innerHTML= ``
+    
     
     for (const item of productos){
 
@@ -68,6 +62,4 @@ const getList = () => {
 
     };
 }
-
-//getList();
 
